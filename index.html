@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Công Minh – Dịch vụ mua bán sách</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="#top" class="logo">Công Minh</a>
+  <nav>
+    <a href="#sach">Sách</a>
+    <a href="#dich-vu">Dịch vụ</a>
+    <a href="#quy-trinh">Quy trình</a>
+    <a href="#hoi-dap">Hỏi đáp</a>
+    <a href="#lien-he" class="btn btn-small">Liên hệ</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Mua sách mới, bán sách cũ – một nơi lo hết.</h1>
+        <p>Hơn 5.000 đầu sách, giao nhanh nội thành Hà Nội trong 2 giờ. Có sách bạn không đọc nữa? Chúng tôi thu mua tại nhà.</p>
+        <a href="#sach" class="btn">Xem sách đang bán</a>
+        <a href="#thu-mua" class="btn btn-ghost">Bán sách cũ</a>
+      </div>
+      <div class="stack" aria-hidden="true">
+        <span class="ke-1">Đắc Nhân Tâm</span>
+        <span class="ke-2">Lập trình Python</span>
+        <span class="ke-3">Dế Mèn Phiêu Lưu Ký</span>
+        <span class="ke-4">Cấu trúc dữ liệu</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÁCH -->
+  <section id="sach" class="wrap section">
+    <h2>Sách đang bán</h2>
+    <input type="radio" name="cat" id="c-all" checked>
+    <input type="radio" name="cat" id="c-van">
+    <input type="radio" name="cat" id="c-cntt">
+    <input type="radio" name="cat" id="c-ky">
+    <div class="filters">
+      <label for="c-all">Tất cả</label>
+      <label for="c-van">Văn học</label>
+      <label for="c-cntt">Công nghệ</label>
+      <label for="c-ky">Kỹ năng</label>
+    </div>
+    <div class="grid">
+      <article class="book" data-cat="van">
+        <div class="cover bia-1 has-img"><img src="images/de-men.jpg" alt="Bìa sách Dế Mèn Phiêu Lưu Ký" loading="lazy"></div>
+        <h3>Dế Mèn Phiêu Lưu Ký</h3><p>Tô Hoài</p>
+        <p class="price">65.000đ <del>80.000đ</del></p>
+        <p class="sold">Đã bán 1.250</p>
+      </article>
+      <article class="book" data-cat="van">
+        <div class="cover bia-2 has-img"><img src="images/so-do.jpg" alt="Bìa sách Số Đỏ" loading="lazy"></div>
+        <h3>Số Đỏ</h3><p>Vũ Trọng Phụng</p>
+        <p class="price">72.000đ</p>
+        <p class="sold">Đã bán 480</p>
+      </article>
+      <article class="book" data-cat="cntt">
+        <div class="cover bia-3 has-img"><img src="images/python-co-ban.jpg" alt="Bìa sách Lập trình Python cơ bản" loading="lazy"></div>
+        <h3>Lập trình Python cơ bản</h3><p>Nhiều tác giả</p>
+        <p class="price">135.000đ <del>160.000đ</del></p>
+        <p class="sold">Đã bán 320</p>
+      </article>
+      <article class="book" data-cat="cntt">
+        <div class="cover bia-4 has-img"><img src="images/ctdl-gt.png" alt="Bìa sách Cấu trúc dữ liệu &amp; giải thuật" loading="lazy"></div>
+        <h3>Cấu trúc dữ liệu &amp; giải thuật</h3><p>Nhiều tác giả</p>
+        <p class="price">150.000đ</p>
+        <p class="sold">Đã bán 275</p>
+      </article>
+      <article class="book" data-cat="ky">
+        <div class="cover bia-5 has-img"><img src="images/dac-nhan-tam.jpg" alt="Bìa sách Đắc Nhân Tâm" loading="lazy"></div>
+        <h3>Đắc Nhân Tâm</h3><p>Dale Carnegie</p>
+        <p class="price">88.000đ <del>110.000đ</del></p>
+        <p class="sold">Đã bán 2.100</p>
+      </article>
+  </section>
+
+  <!-- DỊCH VỤ -->
+  <section id="dich-vu" class="band">
+    <div class="wrap section">
+      <h2>Dịch vụ của Công Minh</h2>
+      <div class="cards">
+        <div class="card"><h3>Giao hàng nhanh</h3><p>Nội thành Hà Nội 2 giờ. Miễn phí ship cho đơn từ 200.000đ.</p></div>
+        <div class="card" id="thu-mua"><h3>Thu mua sách cũ</h3><p>Định giá qua ảnh, nhân viên đến lấy tận nơi, trả tiền ngay.</p></div>
+        <div class="card"><h3>Đổi trả 7 ngày</h3><p>Sách lỗi in, thiếu trang được đổi mới không mất phí.</p></div>
+        <div class="card"><h3>Đặt sách theo yêu cầu</h3><p>Không có trong kho? Chúng tôi tìm và báo giá trong 24 giờ.</p></div>
+      </div>
+
+      <table>
+        <caption>Bảng giá thu mua sách cũ</caption>
+        <thead><tr><th>Tình trạng</th><th>Giá thu</th><th>Ghi chú</th></tr></thead>
+        <tbody>
+          <tr><td>Như mới</td><td>50% giá bìa</td><td>Không ghi chú, không rách</td></tr>
+          <tr><td>Đã đọc, còn tốt</td><td>30% giá bìa</td><td>Có thể có ít vết gấp</td></tr>
+          <tr><td>Cũ, ố vàng</td><td>10–15% giá bìa</td><td>Còn đủ trang</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- QUY TRÌNH -->
+  <section id="quy-trinh" class="wrap section">
+    <h2>Đặt sách trong 4 bước</h2>
+    <ol class="steps">
+      <li><strong>Chọn sách</strong>Xem danh sách hoặc nhắn tên sách cần tìm.</li>
+      <li><strong>Xác nhận đơn</strong>Chúng tôi gọi lại để chốt giá và địa chỉ.</li>
+      <li><strong>Nhận hàng</strong>Kiểm tra sách trước khi thanh toán.</li>
+      <li><strong>Thanh toán</strong>Tiền mặt hoặc chuyển khoản.</li>
+    </ol>
+  </section>
+
+  <!-- HỎI ĐÁP -->
+  <section id="hoi-dap" class="band">
+    <div class="wrap section narrow">
+      <h2>Câu hỏi thường gặp</h2>
+      <details><summary>Tôi có thể xem sách trước khi mua không?</summary><p>Có. Bạn ghé cửa hàng hoặc kiểm tra sách khi shipper giao tới rồi mới thanh toán.</p></details>
+      <details><summary>Thu mua sách cũ có giới hạn số lượng không?</summary><p>Từ 5 cuốn trở lên chúng tôi đến tận nơi. Dưới 5 cuốn, bạn mang tới cửa hàng.</p></details>
+      <details><summary>Bao lâu thì nhận được sách ở tỉnh khác?</summary><p>Từ 2 đến 4 ngày làm việc, tùy khu vực.</p></details>
+    </div>
+  </section>
+
+  <!-- LIÊN HỆ -->
+  <section id="lien-he" class="wrap section narrow">
+    <form action="#" method="post" class="contact-form">
+        <h2>Gửi lời nhắn cho chúng tôi</h2>
+        <p class="sub">Đặt sách, bán sách cũ hoặc hỏi giá – chúng tôi phản hồi trong 24 giờ.</p>
+
+        <label for="ten">Họ và tên của bạn: <b class="req">*</b></label>
+        <input id="ten" type="text" name="ten" required minlength="2" placeholder="Ví dụ: Nguyễn Văn A">
+        <small>Nhập tối thiểu 2 ký tự.</small>
+
+        <label for="email">Địa chỉ Email: <b class="req">*</b></label>
+        <input id="email" type="email" name="email" required placeholder="Ví dụ: email@gmail.com">
+        <small>Vui lòng nhập đúng định dạng email.</small>
+
+        <label for="chude">Chủ đề liên hệ:</label>
+        <input id="chude" type="text" name="chude" list="goi-y" placeholder="Ví dụ: Mua sách, bán sách cũ...">
+        <datalist id="goi-y"><option value="Mua sách mới"><option value="Bán sách cũ"><option value="Tìm sách theo yêu cầu"></datalist>
+
+        <label for="noidung">Nội dung lời nhắn: <b class="req">*</b></label>
+        <textarea id="noidung" name="noidung" rows="5" required minlength="10" maxlength="500" placeholder="Ví dụ: Tôi cần mua 2 cuốn Đắc Nhân Tâm..."></textarea>
+        <small>Nội dung từ 10 đến 500 ký tự.</small>
+
+        <button class="btn" type="submit">Gửi tin nhắn</button>
+      </form>
+  </section>
+</main>
+
+<footer id="ket-noi">
+  <div class="wrap">
+    <h2>Kênh kết nối của chúng tôi</h2>
+    <p>Công Minh luôn sẵn sàng tư vấn, báo giá sách và nhận thu mua sách cũ của bạn.</p>
+    <ul class="contact-info">
+      <li><span class="ico">f</span><div><strong>Facebook:</strong><a href="https://www.facebook.com/share/1VsnnP6Guv/">nguyenminh151108</a></div></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg></span><div><strong>Hotline / Zalo:</strong><a href="tel:0399194289">0399194289</a></div></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24"><rect class="svg-thu" x="3" y="5" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><strong>Email:</strong><a href="mailto:mynhnguyen1508@gmail.com">mynhnguyen1508@gmail.com</a></div></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24"><circle class="svg-dong-ho" cx="12" cy="12"/><path d="M12 7v5l3 2"/></svg></span><div><strong>Giờ mở cửa:</strong><span>8:00 – 21:00 mỗi ngày</span></div></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle class="svg-cham" cx="12" cy="10"/></svg></span><div><strong>Địa chỉ cửa hàng:</strong><span>12 Nguyễn Trãi, Hà Nội</span></div></li>
+    </ul>
+    <p class="copy">© 2026 Công Minh. Mua bán sách mới và sách cũ.</p>
+  </div>
+</footer>
+
+</body>
+</html>

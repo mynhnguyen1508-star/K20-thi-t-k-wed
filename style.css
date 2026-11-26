@@ -1,0 +1,138 @@
+:root{
+  --ink:#14213d; --gold:#fca311; --paper:#f4f6fa; --white:#fff;
+  --text:#3a4256; --line:#dde2ec; --r:10px;
+  --vang-nhat:#e9c46a; --cam:#e76f51; --xanh-duong:#3d5a80; --xanh-ngoc:#2a9d8f; --xam:#e5e5e5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Be Vietnam Pro",system-ui,sans-serif;color:var(--text);background:var(--white);line-height:1.65}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{color:var(--ink);line-height:1.25}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:1rem}
+h2{font-size:1.9rem;margin-bottom:1.5rem}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.narrow{max-width:720px}
+.section{padding-block:64px}
+.band{background:var(--paper)}
+
+/* Thanh điều hướng */
+.topbar{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;
+  padding:12px 24px;background:var(--ink);color:var(--white)}
+.logo{font-weight:800;font-size:1.3rem;color:var(--gold)}
+.topbar nav{display:flex;gap:20px;align-items:center}
+.topbar nav a:hover{color:var(--gold)}
+
+/* Nút */
+.btn{display:inline-block;padding:12px 24px;border:2px solid var(--gold);border-radius:var(--r);
+  background:var(--gold);color:var(--ink);font:700 1rem inherit;font-family:inherit;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--white);border-color:var(--white)}
+.btn-small{padding:6px 14px;font-size:.9rem}
+.btn-ghost{background:transparent;color:var(--white);border-color:var(--white);margin-left:8px}
+.btn-ghost:hover{background:var(--white);color:var(--ink)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* Hero */
+.hero{background:var(--ink);color:#cfd6e6;padding:72px 0}
+.hero h1{color:var(--white)}
+.hero p{max-width:46ch;margin-bottom:1.5rem}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.stack{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.stack span{display:block;width:var(--w);background:var(--c);color:var(--ink);padding:14px 20px;
+  border-radius:4px;font-weight:700;box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.stack span:nth-child(even){margin-left:auto}
+/* Màu & độ rộng từng cuốn ở hero */
+.ke-1{--c:var(--gold);--w:92%}
+.ke-2{--c:var(--xanh-duong);--w:78%;color:var(--white)}
+.ke-3{--c:var(--xam);--w:100%}
+.ke-4{--c:var(--xanh-ngoc);--w:84%;color:var(--white)}
+
+/* Lọc sách (chỉ dùng CSS) */
+input[name=cat]{position:absolute;opacity:0;pointer-events:none}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.filters label{padding:8px 18px;border:1px solid var(--line);border-radius:99px;cursor:pointer;font-weight:500}
+.filters label:hover{border-color:var(--ink)}
+#c-all:checked ~ .filters [for=c-all],
+#c-van:checked ~ .filters [for=c-van],
+#c-cntt:checked ~ .filters [for=c-cntt],
+#c-ky:checked ~ .filters [for=c-ky]{background:var(--ink);color:var(--white);border-color:var(--ink)}
+input[name=cat]:focus-visible ~ .filters{outline:3px solid var(--gold);outline-offset:4px;border-radius:var(--r)}
+#c-van:checked ~ .grid .book:not([data-cat=van]),
+#c-cntt:checked ~ .grid .book:not([data-cat=cntt]),
+#c-ky:checked ~ .grid .book:not([data-cat=ky]){display:none}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:24px}
+.cover{aspect-ratio:3/4;display:flex;align-items:flex-end;padding:16px;margin-bottom:12px;
+  background:var(--c);color:var(--ink);font-weight:800;font-size:1.15rem;line-height:1.2;
+  border-radius:4px 10px 10px 4px;border-left:8px solid rgba(0,0,0,.2)}
+.cover.has-img{padding:0;overflow:hidden}
+.cover img{display:block;width:100%;height:100%;object-fit:cover}
+/* Màu bìa sách */
+.bia-1{--c:var(--vang-nhat)}
+.bia-2{--c:var(--cam);color:var(--white)}
+.bia-3{--c:var(--xanh-duong);color:var(--white)}
+.bia-4{--c:var(--xanh-ngoc);color:var(--white)}
+.bia-5{--c:var(--gold)}
+.bia-6{--c:var(--ink);color:var(--white)}
+.book h3{font-size:1rem}
+.book p{font-size:.9rem}
+.price{color:var(--ink);font-weight:700;margin-top:4px}
+.sold{font-size:.85rem;color:#6b7488}
+.price del{color:#8a93a6;font-weight:400;margin-left:4px}
+
+/* Dịch vụ */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:48px}
+.card{background:var(--white);padding:24px;border-radius:var(--r);border-top:4px solid var(--gold)}
+.card h3{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--r);overflow:hidden}
+caption{text-align:left;font-weight:700;color:var(--ink);margin-bottom:10px}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--ink);color:var(--white)}
+
+/* Quy trình */
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.steps li{counter-increment:s;padding:20px;border:1px solid var(--line);border-radius:var(--r)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;margin-bottom:10px;
+  background:var(--gold);color:var(--ink);border-radius:50%;font-weight:800}
+.steps strong{display:block;color:var(--ink)}
+
+/* Hỏi đáp */
+details{background:var(--white);border-radius:var(--r);margin-bottom:10px;padding:14px 18px}
+summary{cursor:pointer;font-weight:700;color:var(--ink)}
+details[open] summary{margin-bottom:8px}
+
+/* Liên hệ */
+.ico{flex:none;display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--line);
+  border-radius:8px;background:var(--paper);color:var(--ink);font-weight:800;font-size:1.2rem}
+.ico svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact-form{display:flex;flex-direction:column;padding:32px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r)}
+.contact-form .sub{margin:-12px 0 12px;font-size:.95rem}
+.contact-form label{margin-top:12px;font-weight:700;color:var(--ink)}
+.req{color:#c0392b}
+.contact-form small{margin-top:4px;font-size:.85rem;color:#6b7488}
+.contact-form .btn{margin-top:20px;background:var(--ink);border-color:var(--ink);color:var(--white)}
+.contact-form .btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+input,select,textarea{width:100%;margin-top:6px;padding:11px 14px;border:1px solid var(--line);border-radius:8px;background:var(--white);font:inherit}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--gold);border-color:var(--ink)}
+input:user-invalid,textarea:user-invalid{border-color:#c0392b}
+textarea{resize:vertical}
+
+footer{background:var(--ink);color:#cfd6e6;padding:48px 0 24px}
+footer h2{color:var(--white);font-size:1.5rem;margin-bottom:.5rem}
+.contact-info{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin:24px 0}
+.contact-info li{display:flex;gap:14px;align-items:center}
+.contact-info strong{display:block;color:var(--white)}
+.contact-info a:hover{color:var(--gold)}
+/* Kích cỡ hình vẽ icon ở footer */
+.svg-thu{width:18px;height:14px}
+.svg-dong-ho{r:9px}
+.svg-cham{r:2.5px}
+footer .ico{background:transparent;border-color:#3a4a6b;color:var(--gold)}
+.copy{padding-top:16px;border-top:1px solid #2c3a5c;font-size:.9rem}
+
+/* Mobile */
+@media (max-width:720px){
+  .hero-grid{grid-template-columns:1fr}
+  .topbar nav a:not(.btn){display:none}
+  .section{padding-block:44px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
